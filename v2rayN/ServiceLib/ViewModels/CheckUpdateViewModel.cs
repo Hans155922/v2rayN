@@ -47,6 +47,7 @@ namespace ServiceLib.ViewModels
             {
                 _checkUpdateModel.Add(GetCheckUpdateModel(_v2rayN));
                 _checkUpdateModel.Add(GetCheckUpdateModel(ECoreType.Xray.ToString()));
+                _checkUpdateModel.Add(GetCheckUpdateModel(ECoreType.XrayOld.ToString()));
                 _checkUpdateModel.Add(GetCheckUpdateModel(ECoreType.mihomo.ToString()));
                 _checkUpdateModel.Add(GetCheckUpdateModel(ECoreType.sing_box.ToString()));
             }
@@ -91,6 +92,10 @@ namespace ServiceLib.ViewModels
                     await CheckUpdateN(EnableCheckPreReleaseUpdate);
                 }
                 else if (item.CoreType == ECoreType.Xray.ToString())
+                {
+                    await CheckUpdateCore(item, EnableCheckPreReleaseUpdate);
+                }
+                else if (item.CoreType == ECoreType.XrayOld.ToString())
                 {
                     await CheckUpdateCore(item, EnableCheckPreReleaseUpdate);
                 }
