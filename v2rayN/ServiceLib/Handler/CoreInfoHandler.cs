@@ -90,6 +90,24 @@
 
             _coreInfo.Add(new CoreInfo
             {
+                CoreType = ECoreType.XrayOld,
+                CoreExes = new List<string> { "xray", "wxray" },
+                Arguments = "run -c {0}",
+                Url = Global.XrayCoreUrl,
+                ReleaseApiUrl = Global.XrayCoreUrl.Replace(Global.GithubUrl, Global.GithubApiUrl),
+                DownloadUrlWin64 = Global.XrayCoreUrl + "/download/v1.8.24/Xray-windows-64.zip",
+                DownloadUrlWinArm64 = Global.XrayCoreUrl + "/download/v1.8.24/Xray-windows-arm64-v8a.zip",
+                DownloadUrlLinux64 = Global.XrayCoreUrl + "/download/v1.8.24/Xray-linux-64.zip",
+                DownloadUrlLinuxArm64 = Global.XrayCoreUrl + "/download/v1.8.24/Xray-linux-arm64-v8a.zip",
+                DownloadUrlOSX64 = Global.XrayCoreUrl + "/download/v1.8.24/Xray-macos-64.zip",
+                DownloadUrlOSXArm64 = Global.XrayCoreUrl + "/download/v1.8.24/Xray-macos-arm64-v8a.zip",
+                Match = "Xray",
+                VersionArg = "-version",
+                RedirectInfo = true,
+            });
+
+            _coreInfo.Add(new CoreInfo
+            {
                 CoreType = ECoreType.mihomo,
                 CoreExes = new List<string> { "mihomo-windows-amd64-compatible", "mihomo-windows-amd64", "mihomo-linux-amd64", "mihomo", "clash" },
                 Arguments = "-f config.json" + PortableMode(),
