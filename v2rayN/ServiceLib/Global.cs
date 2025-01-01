@@ -184,11 +184,12 @@
         public static readonly List<string> VmessSecurities = new() { "aes-128-gcm", "chacha20-poly1305", "auto", "none", "zero" };
         public static readonly List<string> SsSecurities = new() { "aes-256-gcm", "aes-128-gcm", "chacha20-poly1305", "chacha20-ietf-poly1305", "none", "plain" };
         public static readonly List<string> SsSecuritiesInXray = new() { "aes-256-gcm", "aes-128-gcm", "chacha20-poly1305", "chacha20-ietf-poly1305", "xchacha20-poly1305", "xchacha20-ietf-poly1305", "none", "plain", "2022-blake3-aes-128-gcm", "2022-blake3-aes-256-gcm", "2022-blake3-chacha20-poly1305" };
+        public static readonly List<string> SsSecuritiesInXrayOld = new() { "aes-256-gcm", "aes-128-gcm", "chacha20-poly1305", "chacha20-ietf-poly1305", "xchacha20-poly1305", "xchacha20-ietf-poly1305", "none", "plain", "2022-blake3-aes-128-gcm", "2022-blake3-aes-256-gcm", "2022-blake3-chacha20-poly1305" };
         public static readonly List<string> SsSecuritiesInSingbox = new() { "aes-256-gcm", "aes-192-gcm", "aes-128-gcm", "chacha20-ietf-poly1305", "xchacha20-ietf-poly1305", "none", "2022-blake3-aes-128-gcm", "2022-blake3-aes-256-gcm", "2022-blake3-chacha20-poly1305", "aes-128-ctr", "aes-192-ctr", "aes-256-ctr", "aes-128-cfb", "aes-192-cfb", "aes-256-cfb", "rc4-md5", "chacha20-ietf", "xchacha20" };
         public static readonly List<string> Flows = new() { "", "xtls-rprx-vision", "xtls-rprx-vision-udp443" };
         public static readonly List<string> Networks = new() { "tcp", "kcp", "ws", "httpupgrade", "xhttp", "h2", "quic", "grpc" };
         public static readonly List<string> KcpHeaderTypes = new() { "srtp", "utp", "wechat-video", "dtls", "wireguard" };
-        public static readonly List<string> CoreTypes = new() { "Xray", "sing_box" };
+        public static readonly List<string> CoreTypes = new() { "Xray", "XrayOld", "sing_box" };
         public static readonly List<string> DomainStrategies = new() { "AsIs", "IPIfNonMatch", "IPOnDemand" };
         public static readonly List<string> DomainStrategies4Singbox = new() { "ipv4_only", "ipv6_only", "prefer_ipv4", "prefer_ipv6", "" };
         public static readonly List<string> DomainMatchers = new() { "linear", "mph", "" };
