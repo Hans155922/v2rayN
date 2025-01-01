@@ -4,6 +4,7 @@
     {
         v2fly = 1,
         Xray = 2,
+        XrayOld = 3,
         v2fly_v5 = 4,
         mihomo = 13,
         hysteria = 21,
