@@ -23,6 +23,7 @@ namespace ServiceLib.Handler
 
             Environment.SetEnvironmentVariable("V2RAY_LOCATION_ASSET", Utils.GetBinPath(""), EnvironmentVariableTarget.Process);
             Environment.SetEnvironmentVariable("XRAY_LOCATION_ASSET", Utils.GetBinPath(""), EnvironmentVariableTarget.Process);
+            Environment.SetEnvironmentVariable("XRAYOLD_LOCATION_ASSET", Utils.GetBinPath(""), EnvironmentVariableTarget.Process);
 
             if (Utils.IsNonWindows())
             {
